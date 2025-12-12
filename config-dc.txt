@@ -1,0 +1,26 @@
+# Configuration file for Koo-Toueg Checkpointing Protocol
+# Project 3 - CS/CE 6378 Advanced Operating Systems
+# Working alone - checkpointing protocol only
+
+# Global parameters: numNodes minDelay
+5 15
+
+# Node definitions: nodeID hostname listenPort
+0 dc01.utdallas.edu 1234
+1 dc02.utdallas.edu 1233
+2 dc03.utdallas.edu 1233
+3 dc04.utdallas.edu 1232
+4 dc05.utdallas.edu 1233
+
+# Neighbor lists: space delimited list of neighbors for each node
+1 4          # neighbors for node 0
+0 2 3        # neighbors for node 1
+1 3          # neighbors for node 2
+1 2 4        # neighbors for node 3
+0 3          # neighbors for node 4
+
+# Checkpointing operations: (operation, nodeID)
+(c, 1)
+(c, 3)
+(c, 1)
+(c, 4)
